@@ -21,5 +21,5 @@ class GetPrograms
 
 end
 
-programs = GetPrograms.new.get_programs
-puts programs
+programs = GetPrograms.New
+puts programs.program_school.uniq
