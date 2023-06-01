@@ -12,6 +12,13 @@ class GetPrograms
     response.body
   end
 
+  def program_school
+    programs = JSON.parse(self.get_programs)
+    programs.collect do |programs|
+      programs["agency"]
+    end
+  end
+
 end
 
 programs = GetPrograms.new.get_programs
